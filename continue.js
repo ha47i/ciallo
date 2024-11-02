@@ -17,7 +17,7 @@ function txtfilego() {
   var txtname = parts[0]; // 第1部分
   var tocode = parts[1]; // 第3部分
   // 定义路径
-  var txturl = 'https://ha47i.github.io/ciallo/sourcetxts/' + txtname + '.txt';
+  var txturl = 'https://ha47i.github.io/ciallo-href/sourcetxts/' + txtname + '.txt';
   // 生成一个随机数作为查询参数
   var randomParam = '?' + Math.random().toString(36).substring(7);
   // 获取跳转码
