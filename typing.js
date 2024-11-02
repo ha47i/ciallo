@@ -1,6 +1,6 @@
 const textElement = document.getElementById('text');
 const cursorElement = document.getElementById('cursor');
-const texts = ["你好～", "读取中Loading", "Ciallo～(∠・ω<)⌒★"];
+const texts = ["＊你好吖～", "*还在读取哦", "Ciallo～(∠・ω<)⌒★"];
 let index = 0;
 
 function type(text, callback) {
