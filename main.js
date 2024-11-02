@@ -18,7 +18,7 @@ function decodeBase64(content) {
 
 // base64跳转模块
 function base64go() {
-  var targetvalue = getUrlParameter('to64');
+  var targetvalue = getUrlParameter('64');
   // 解码base64内容
   targetvalue2 = decodeBase64(targetvalue);
   // 解码失败?
@@ -37,7 +37,7 @@ function step2() {
 // 链接源判定（a为转发值，b为base64值，有值=非空）
 function go() {
   var a = getUrlParameter('to');
-  var b = getUrlParameter('to64');
+  var b = getUrlParameter('64');
   if (a && !b) {
     // 只有 a 有值
     step2();
@@ -64,13 +64,13 @@ function typedone() {
 }
 
 // 纯黑背景判定
-var oledvalue = getUrlParameter('oled');
+var oledvalue = getUrlParameter('o');
 if (oledvalue === 'y') {
   document.getElementById('darkmode').href = 'darklightOLED.css';
 }
 
 // 光标样式判定（吾知其愚也，而仅三层无性能之损也。）
-var cvalue = getUrlParameter('cursor');
+var cvalue = getUrlParameter('c');
 if (cvalue === 'i') {
   document.getElementById('cursor').innerText = '|';
 } else {
