@@ -63,25 +63,41 @@ function typedone() {
   setTimeout("go()",500);
 }
 
-// 纯黑背景判定
-var oledvalue = getUrlParameter('o');
-if (oledvalue === 'y') {
+// 纯黑背景与光标样式判定
+// 获取当前页面地址
+var currentURL = window.location.href;
+// 检测地址中是否包含 &oy
+if (currentURL.indexOf('&o') !== -1) {
   document.getElementById('darkmode').href = 'darklightOLED.css';
+} else {
+  // 否则什么都不做
 }
-
-// 光标样式判定（吾知其愚也，而仅三层无性能之损也。）
-var cvalue = getUrlParameter('c');
-if (cvalue === 'i') {
+// 检测地址中是否包含 &ci
+if (currentURL.indexOf('&ci') !== -1) {
   document.getElementById('cursor').innerText = '|';
 } else {
-  if (cvalue === 'ii') {
-    document.getElementById('cursor').innerText = 'i';
-  } else {
-    if (cvalue === '') {
-    } else {
-      document.getElementById('cursor').innerText = cvalue;
-    }
-  }
+  // 否则什么都不做
 }
 
-// ?oled=y&cursor=i&source=&to=g
+// // 纯黑背景判定
+// var oledvalue = getUrlParameter('o');
+// if (oledvalue === 'y') {
+  // document.getElementById('darkmode').href = 'darklightOLED.css';
+// }
+
+// // 光标样式判定（吾知其愚也，而仅三层无性能之损也。）
+// var cvalue = getUrlParameter('c');
+// if (cvalue === 'i') {
+  // document.getElementById('cursor').innerText = '|';
+// } else {
+  // if (cvalue === 'ii') {
+    // document.getElementById('cursor').innerText = 'i';
+  // } else {
+    // if (cvalue === '') {
+    // } else {
+      // document.getElementById('cursor').innerText = cvalue;
+    // }
+  // }
+// }
+
+// // ?oled=y&cursor=i&source=&to=g
